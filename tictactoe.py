@@ -25,7 +25,7 @@ def enter_move(board):
     user_move = input("Enter a move:")
     try:
         user_move= int(user_move)
-    except ValueError:
+    except (ZeroDivisionError, ValueError):
         user_move = int(input("Enter a move:"))
 
     row_index = 0
